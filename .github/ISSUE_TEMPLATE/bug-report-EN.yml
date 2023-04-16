@@ -1,0 +1,10 @@
+name: Bug report
+description: Create a report to help me improve
+title: "[BUG] "
+
+body:
+- type: markdown
+  attributes:
+    value: |
+      Please note that this is only for bugs, help with installation or other types of support should
+      be taken to the Discord Guild instead.
