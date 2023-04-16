@@ -7,7 +7,7 @@ body:
   id: confirmationskr
   attributes:
     label: 잠깐! 버그 리포트를 작성하기 전에-
-    description: 아래의 항목을 먼저 확인해보세요. 아래의 사항을 확인해 보는 것만으로 일반적인 문제가 해결될 수도 있습니다.
+    description: 아래의 항목을 먼저 확인해보세요. *아래의 사항을 확인해 보는 것*만으로 일반적인 문제가 해결될 수도 있습니다.
     options:
       - label: 해당 스크립트는 최신 버전을 사용합니다.
         required: true
@@ -16,3 +16,6 @@ body:
       - label: 해당 스크립트는 불법 배포망에서 받지 않은 정품입니다.
         required: true
       - label: 해당 스크립트는 제3자가 수정하지 않은 오리지널 버전입니다.
+        required: true
+      - label: AE 및 스크립트의 환경 설정, 디스크 캐시 및 데이터베이스를 초기화해봅니다.
+        required: true
