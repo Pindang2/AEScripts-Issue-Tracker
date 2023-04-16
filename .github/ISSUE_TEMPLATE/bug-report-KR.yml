@@ -105,11 +105,15 @@ body:
       3. xx옵션, yy옵션을 zz로 설정합니다.
       4. 레이어를 30개 정도 선택하고 적용 버튼을 누릅니다.
       5. 버그가 발생합니다.
+  validations:
+    required: false
 
 - type: textarea
   attributes:
     label: 더 붙이고 싶은 말이 있나요?
     description: 자유롭게 덧붙이고 싶은 말을 써 주세요.
+  validations:
+    required: false
 
 - type: markdown
   attributes:
