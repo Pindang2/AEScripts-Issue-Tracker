@@ -3,6 +3,10 @@ description: 이 스크립트를 개선할 수 있도록, 버그가 있다면 �
 title: "[BUG] "
 
 body:
+- type: markdown
+  attributes:
+    value: 상단에 제목을 써주세요. 제목은 `[BUG] 스크립트 화면이 표시가 되지 않음`과 같이 간략하게 현상을 설명해주세요.
+
 - type: checkboxes
   id: confirmationskr
   attributes:
@@ -17,12 +21,49 @@ body:
         required: true
       - label: 해당 스크립트는 제3자가 수정하지 않은 오리지널 버전입니다.
         required: true
-      - label: | 
-          AE 및 스크립트의 환경 설정, 디스크 캐시 및 데이터베이스를 초기화해봅니다.
-          초기화 방법은 [AE의 데이터 초기화 방법](https://learnandcreate.tistory.com/987)과 [스크립트 초기화 방법](https://pindang2.com/helps/aescripts/resetscript)을 참고하세요.
+      - label: 해당 스크립트를 사용하기 전에 주의 사항과 사용 방법을 꼼꼼히 살펴봤습니다.
         required: true
+      - label: AE 및 스크립트의 환경 설정, 디스크 캐시 및 데이터베이스를 초기화해봅니다. 초기화 방법은 [AE의 디스크 캐시 삭제 방법](https://learnandcreate.tistory.com/987)과 [스크립트 초기화 방법](https://pindang2.com/helps/aescripts/resetscript)을 참고하세요.
+        required: false
 
-- type: markdown
+- type: dropdown
+  id: productlistkr
   attributes:
-    value: |
-      gggggbbbbb
+    label: 어떤 제품에서 문제가 발생했나요?
+    description: 문제가 발생한 스크립트 또는 프리셋 제품을 아래 목록에서 선택해 주세요.
+    multiple: false
+    options:
+      - "Auto TextBox"
+      - "Additional Transform"
+      - "스크립트 제품 전부"
+      - "프리셋 제품 전부"
+  validations:
+    required: true
+
+- type: input
+  attributes:
+    label: 문제가 발생한 스크립트 또는 프리셋의 버전을 알려주세요.
+    description: 프리셋의 버전은 효과 창에서, 스크립트의 버전은 스크립트 내 ⓘ 버튼을 눌러 확인할 수 있습니다.
+    placeholder: (예) vRelease 1.0.1-HOTFIX1
+
+- type: dropdown
+  attributes: 
+    label: 문제가 발생하는 AE의 버전을 알려주세요.
+    description: 아래 버전 중 문제를 경험한 AE의 버전을 모두 선택해주세요.
+    multiple: true
+    options:
+      - "After Effects CS6"
+      - "After Effects CC 2014~2017"
+      - "After Effects CC 2018"
+      - "After Effects CC 2019"
+      - "After Effects 2020"
+      - "After Effects 2021"
+      - "After Effects 2022"
+      - "After Effects 2023"
+      - "After Effects 2024"
+  
+- type: textarea
+  attributes:
+    label: 문제를 자세히 설명해 주세요.
+    description: 버그가 무엇인지에 대한 명확하고 간결한 설명을 부탁합니다.
+    
