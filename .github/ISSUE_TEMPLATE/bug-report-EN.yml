@@ -1,0 +1,127 @@
+name: "Bug Report"
+description: "Please report any bugs you encounter in order to improve this script."
+title: "[BUG] "
+labels: ['Bug']
+assignees: [Pindang2]
+
+body:
+- type: markdown
+  attributes:
+    value: |
+      Please write the title at the top. Briefly describe the issue, such as [BUG] Script UI is not displaying.
+      ```
+      Unfortunately, I do not currently have an Apple Mac product, so it is difficult to fix bugs that
+      occur in the Mac OS environment. If I acquire a Mac, I will try to fix bugs that occur exclusively in Mac OS.
+      I apologize for the inconvenience!
+      ```
+
+- type: checkboxes
+  id: confirmations
+  attributes:
+    label: Hold on! Before submitting a bug report -
+    description: "Check the following items first. Sometimes, general problems can be resolved just by checking these items."
+    options:
+      - label: "I am using the latest version of the script."
+        required: true
+      - label: "I am using an After Effects version supported by the script."
+        required: true
+      - label: "The script I am using is a genuine copy and has not been obtained from an illegal distribution network."
+        required: true
+      - label: "The script I am using is the original version not modified by any third party."
+        required: true
+      - label: "I have thoroughly reviewed the precautions and usage instructions before using the script."
+        required: true
+      - label: "I have tried resetting After Effects and script settings, disk cache, and database. (Refer to [How to clear After Effects disk cache](https://www.schoolofmotion.com/blog/after-effects-disk-cache) and [How to reset the script](https://pindang2.com/helps/aescripts/resetscript) for reset instructions.)"
+        required: false
+
+- type: dropdown
+  id: productlist
+  attributes:
+    label: "Which product did you experience the issue with?"
+    description: "Select the script or preset product that you had a problem with from the list below."
+    multiple: false
+    options:
+      - "Auto TextBox"
+      - "Additional Transform"
+      - "All script products"
+      - "All preset products"
+  validations:
+    required: true
+
+- type: input
+  id: scriptversion
+  attributes:
+    label: "What is the version of the script or preset that you experienced the issue with?"
+    description: "You can find the version of the preset in the Effects panel, and the version of the script by clicking ⓘ button in the script UI."
+    placeholder: "(e.g. vRelease 1.0.1-HOTFIX1)"
+  validations:
+    required: true
+
+- type: dropdown
+  id: aeversion
+  attributes: 
+    label: "Please indicate the version of After Effects where the issue occurred."
+    description: "Select all versions below where the issue was experienced."
+    multiple: true
+    options:
+      - "After Effects CS6"
+      - "After Effects CC 2014~2017"
+      - "After Effects CC 2018"
+      - "After Effects CC 2019"
+      - "After Effects 2020"
+      - "After Effects 2021"
+      - "After Effects 2022"
+      - "After Effects 2023"
+      - "After Effects 2024"
+  validations:
+    required: true
+  
+- type: textarea
+  id: bugdescription
+  attributes:
+    label: "Please describe the issue in detail."
+    description: "Please provide a clear and concise explanation of the bug. You can include pictures and screenshots."
+    placeholder: "For example, when running the script, the 'Failed to fetch JSON object' error message appears and the button does not show up."
+  validations:
+    required: true
+
+- type: textarea
+  id: expected
+  attributes:
+    label: "What action did you expect to happen?"
+    description: "If the script did not encounter any bugs, how should it have worked? Please let us know what you expected the script to do."
+    placeholder: "For example, if there were no bugs, there should have been additional properties added to 30 layers."
+  validations:
+    required: true
+
+- type: textarea
+  id: reproducesteps
+  attributes:
+    label: How to reproduce the issue?
+    description: | 
+      In order to fix the issue, I need to be able to reproduce it.
+      Please provide detailed steps to reproduce the issue.
+    placeholder: | 
+      For Example:
+      1. Launch After Effects 2023.
+      2. Open a heavy project with more than xx layers.
+      3. Set the xx and yy options to zz.
+      4. Select around 30 layers and click on the apply button.
+      5. The error occurs.
+  validations:
+    required: false
+
+- type: textarea
+  id: more
+  attributes:
+    label: "Anything else you'd like to add?"
+    description: "Please feel free to add any additional comments you have."
+  validations:
+    required: false
+
+- type: markdown
+  attributes:
+    value: |
+      ```markdown
+      * Items marked with an asterisk are required.
+      ```

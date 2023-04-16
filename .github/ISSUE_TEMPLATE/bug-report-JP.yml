@@ -1,0 +1,126 @@
+name: "バグリポート (エラーリポート)"
+description: "私のスクリプトを改善するためにバグがあれば教えてください。"
+title: "[BUG] "
+labels: ['Bug']
+assignees: [Pindang2]
+
+body:
+- type: markdown
+  attributes:
+    value: |
+      タイトルを入力してください。タイトルは、`[BUG]スクリプト画面が表示されない`のように、現象を簡潔に説明してください。
+      ```
+      残念ながら、現在私はApple Mac製品を所有していないため、Mac OS環境で発生したバグを修正することは困難です。
+      Macを購入できるなら、Mac OS限定で発生するバグも修正してみます。申し訳ございません！
+      ```
+
+- type: checkboxes
+  id: confirmations
+  attributes:
+    label: ちょっと待ってください！バグレポートを書く前に-
+    description: "以下の項目を先に確認してください。以下の事項を確認するだけで、一般的な問題が解決する場合があります。"
+    options:
+      - label: "該当するスクリプトの最新バージョンを使用しています。"
+        required: true
+      - label: "該当するスクリプトがサポートするAEバージョンを使用しています。"
+        required: true
+      - label: "違法配布から入手していない正規のスクリプトを使用しています。"
+        required: true
+      - label: "第三者が修正していないオリジナルバージョンのスクリプトを使用しています。"
+        required: true
+      - label: "該当するスクリプトを使用する前に注意事項や使用方法を十分に確認しました。"
+        required: true
+      - label: "AEおよびスクリプトの環境設定、ディスクキャッシュおよびデータベースを初期化しました。 (初期化方法は [AEのディスクキャッシュの削除方法](https://learnandcreate.tistory.com/987) および [スクリプトの初期化方法](https://pindang2.com/helps/aescripts/resetscript) を参照してください。)"
+        required: false
+
+- type: dropdown
+  id: productlist
+  attributes:
+    label: "どの製品で問題が発生しましたか？"
+    description: "問題が発生したスクリプトまたはプリセット製品を、以下のリストから選択してください。"
+    multiple: false
+    options:
+      - "Auto TextBox"
+      - "Additional Transform"
+      - "すべてのスクリプト製品"
+      - "すべてのプリセット製品"
+  validations:
+    required: true
+
+- type: input
+  id: scriptversion
+  attributes:
+    label: "問題の発生したスクリプトまたはプリセットのバージョンを教えてください。"
+    description: "プリセットのバージョンはエフェクトウィンドウで、スクリプトのバージョンはスクリプト内の ⓘ ボタンをクリックして確認できます。"
+    placeholder: "(例) vRelease 1.0.1-HOTFIX1"
+  validations:
+    required: true
+
+- type: dropdown
+  id: aeversion
+  attributes: 
+    label: "問題が発生したAEのバージョンを教えてください。"
+    description: "問題が発生したAEのバージョンを以下のバージョンから複数選択してください。"
+    multiple: true
+    options:
+      - "After Effects CS6"
+      - "After Effects CC 2014~2017"
+      - "After Effects CC 2018"
+      - "After Effects CC 2019"
+      - "After Effects 2020"
+      - "After Effects 2021"
+      - "After Effects 2022"
+      - "After Effects 2023"
+      - "After Effects 2024"
+  validations:
+    required: true
+  
+- type: textarea
+  id: bugdescription
+  attributes:
+    label: 問題を詳しく説明してください。
+    description: バグが何かを明確かつ簡潔に説明してください。写真やスクリーンショットを含めることができます。
+    placeholder: 例）スクリプトを実行すると、「Failed to fetch JSON object」というエラーが表示され、ボタンが表示されません。
+  validations:
+    required: true
+
+- type: textarea
+  id: expected
+  attributes:
+    label: どのような動作が期待されましたか？
+    description: スクリプトでバグが発生しなかった場合、どのように動作するはずだったのでしょうか？ スクリプトに期待した動作を教えてください。
+    placeholder: 例）バグが発生しなかった場合、30個のレイヤーに追加プロパティが追加されるはずでした。
+  validations:
+    required: true
+
+- type: textarea
+  id: reproducesteps
+  attributes:
+    label: エラーを再現するにはどうすればよいですか？
+    description: |
+      まず、私がエラーを再現できるようにする必要があります。
+      エラーが発生するまでの手順を詳しく説明していただけるとありがたいです。
+    placeholder: |
+      例えば)
+      1. After Effects 2023バージョンを起動します。
+      2. レイヤーがxx個以上ある重いプロジェクトを開きます。
+      3. xxオプション、yyオプションをzzに設定します。
+      4. 約30のレイヤーを選択して適用ボタンをクリックします。
+      5. エラーが発生します。
+  validations:
+    required: false
+
+- type: textarea
+  id: more
+  attributes:
+    label: 付け加えたいことはありますか？
+    description: 自由に付け加えたいことを書いてください。
+  validations:
+    required: false
+
+- type: markdown
+  attributes:
+    value: |
+      ```markdown
+      * 「*」がついた項目は必須項目です。
+      ```
