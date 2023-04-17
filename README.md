@@ -6,7 +6,7 @@ If an error occurs while using a script or preset, please report as follows.
 | [한국어](https://github.com/Pindang2/AEScripts-Issue-Tracker/blob/main/README_KR.md) | [日本語](https://github.com/Pindang2/AEScripts-Issue-Tracker/blob/main/README_JP.md) |
  
 ---
-###Report Script Errors
+### Report Script Errors
 1. Go to [Issues](https://github.com/Pindang2/AEScripts-Issue-Tracker/issues).
 2. Check if the same error has already been reported.
 3. If it is a new error that has not already been reported, click the [New Issue](https://github.com/Pindang2/AEScripts-Issue-Tracker/issues/new/choose) to generate a new report.
