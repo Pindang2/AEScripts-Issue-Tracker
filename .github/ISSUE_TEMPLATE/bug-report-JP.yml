@@ -1,7 +1,7 @@
 name: "バグリポート (エラーリポート)"
 description: "私のスクリプトを改善するためにバグがあれば教えてください。"
 title: "[BUG] "
-labels: ['Bug']
+labels: ['bug']
 assignees: [Pindang2]
 
 body:

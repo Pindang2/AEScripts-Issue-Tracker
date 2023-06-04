@@ -1,7 +1,7 @@
 name: "버그 리포트 (오류 보고)"
 description: "이 스크립트를 개선할 수 있도록, 버그가 있다면 알려주세요."
 title: "[BUG] "
-labels: ['Bug']
+labels: ['bug']
 assignees: [Pindang2]
 
 body:

@@ -1,0 +1,53 @@
+name: "기능과 개선 제안하기"
+description: "이 스크립트를 개선할 수 있도록, 아이디어 또는 개선사항이 있다면 알려주세요."
+title: "[SUGGEST] "
+labels: ['enhancement']
+assignees: [Pindang2]
+
+body:
+- type: markdown
+  attributes:
+    value: |
+      위 칸에 제목을 써주세요. 제목은 `[SUGGEST] 키프레임 마이그레이션 기능`과 같이 간략하게 제목을 지어주세요.
+
+- type: dropdown
+  id: productlist
+  attributes:
+    label: "어떤 제품의 개선을 제안하시나요?"
+    description: "제안사항이 있는 스크립트 또는 프리셋 제품을 아래 목록에서 선택해 주세요."
+    multiple: true
+    options:
+      - "Auto TextBox"
+      - "Additional Transform"
+      - "새로운 스크립트 또는 프리셋 아이디어"
+  validations:
+    required: true
+
+- type: textarea
+  id: bugdescription
+  attributes:
+    label: 제안사항을 자세히 설명해 주세요.
+    description: 마크다운 문법을 사용할 수 있고 사진 및 스크린샷을 포함할 수 있습니다.
+    placeholder: |
+      예) 기존 레이어에 존재하던 '위치'프로퍼티가 Additional Transform 컨트롤러에 마이그레이션 또는 그 반대의 기능을 수행하는 버튼이 있었으면 좋겠습니다.
+      1. Additional Transform 적용이 되어 있는 기존 레이어에 스크립트를 적용하면 표시되는 창에 "키프레임 마이그레이션" 버튼을 추가합니다.
+      2. 키프레임 마이그레이션을 선택하면 어떤 프로퍼티를 마이그레이션할 건지 선택(멀티 체크박스)하는 창이 표시됩니다.
+      3. 그 창에서 프로퍼티를 선택하고 "AT->레이어", "레이어->AT", "취소" 버튼 중 하나를 선택할 수 있습니다."
+      (물론 이렇게까지 자세하게 적지 않아도 괜찮아요)
+  validations:
+    required: true
+
+- type: textarea
+  id: more
+  attributes:
+    label: 더 붙이고 싶은 말이 있나요?
+    description: 자유롭게 덧붙이고 싶은 말을 써 주세요.
+  validations:
+    required: false
+
+- type: markdown
+  attributes:
+    value: |
+      ```markdown
+      * 별표가 붙은 항목은 필수 항목입니다.
+      ```

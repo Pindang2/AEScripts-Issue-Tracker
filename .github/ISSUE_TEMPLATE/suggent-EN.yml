@@ -1,0 +1,53 @@
+name: "Suggest features and improvements"
+description: "Please let me know if you have any ideas or improvements, so I can improve this script."
+title: "[SUGGEST] "
+labels: ['enhancement']
+assignees: [Pindang2]
+
+body:
+- type: markdown
+  attributes:
+    value: |
+      Please write the title in the column above. Please briefly name the title like `[SUGGEST] keyframe migration function``.
+
+- type: dropdown
+  id: productlist
+  attributes:
+    label: "What kind of improvements do you make?"
+    description: "Please select a script or preset product with suggestions from the list below."
+    multiple: true
+    options:
+      - "Auto TextBox"
+      - "Additional Transform"
+      - "New script or preset idea"
+  validations:
+    required: true
+
+- type: textarea
+  id: bugdescription
+  attributes:
+    label: Please elaborate on the suggestion.
+    description: You can use markdown grammar and include pictures and screenshots.
+    placeholder: |
+      e.g.) I would like the 'location' property that existed in the existing layer to have a button on the Additional Transform controller that performs migration or vice versa.
+      1. Add the "Keyframe Migration" button to the window that appears when you apply the script to an existing layer with Additional Transform.
+      2. When you select a keyframe migration, a window will be displayed to select which properties to migrate (multi-checkbox).
+      3. In that window, you can select Properties and choose one of the "AT->Layer", "Layer->AT", or "Cancel" buttons."
+      (Of course, you don't have to write it down in detail like this.)
+  validations:
+    required: true
+
+- type: textarea
+  id: more
+  attributes:
+    label: Is there anything else you want to add?
+    description: Feel free to write what you want to add.
+  validations:
+    required: false
+
+- type: markdown
+  attributes:
+    value: |
+      ```markdown
+      * Items marked with an asterisk are required.
+      ```

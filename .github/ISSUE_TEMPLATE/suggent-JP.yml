@@ -1,0 +1,53 @@
+name: "機能と改善を提案します"
+description: "このスクリプトを改善できるように、アイデアや改善事項があれば教えてください。"
+title: "[SUGGEST] "
+labels: ['enhancement']
+assignees: [Pindang2]
+
+body:
+- type: markdown
+  attributes:
+    value: |
+      上のマスにタイトルを書いてください。 タイトルは`[SUGGEST]キーフレーム移行機能`のように簡単にタイトルを付けてください。
+
+- type: dropdown
+  id: productlist
+  attributes:
+    label: "どのような製品の改善を提案しますか？"
+    description: "提案事項のあるスクリプトまたはプリセット製品を、以下のリストから選択してください。"
+    multiple: true
+    options:
+      - "Auto TextBox"
+      - "Additional Transform"
+      - "新しいスクリプトまたはプリセットのアイデアです"
+  validations:
+    required: true
+
+- type: textarea
+  id: bugdescription
+  attributes:
+    label: 提案事項を詳しく説明してください。
+    description: 「マークダウン文法」を使用でき、写真やスクリーンショットを含めることができます。
+    placeholder: |
+      例）既存のレイヤーに存在していた「位置」プロパティがAdditional Transformコントローラに移行またはその逆の機能を実行するボタンがあるといいですね。
+      1. Additional Transformが適用されている既存のレイヤーにスクリプトを適用すると、表示されるウィンドウに「キーフレーム移行」ボタンを追加します。
+      2. キーフレーム移行を選択すると、どのプロパティを移行するかを選択（マルチチェックボックス）するウィンドウが表示されます。
+      3. そのウィンドウでプロパティを選択し、"AT->レイヤー"、"レイヤー->AT"、"キャンセル"ボタンのいずれかを選択できます。"
+      (もちろんここまで詳しく書かなくても大丈夫です)
+  validations:
+    required: true
+
+- type: textarea
+  id: more
+  attributes:
+    label: 他につけたい言葉はありますか？
+    description: 自由に付け加えたい言葉を書いてください。
+  validations:
+    required: false
+
+- type: markdown
+  attributes:
+    value: |
+      ```markdown
+      * 「*」がついた項目は必須項目です。
+      ```

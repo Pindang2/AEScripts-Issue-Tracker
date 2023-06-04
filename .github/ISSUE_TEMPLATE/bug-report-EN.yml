@@ -1,7 +1,7 @@
 name: "Bug Report"
 description: "Please report any bugs you encounter in order to improve this script."
 title: "[BUG] "
-labels: ['Bug']
+labels: ['bug']
 assignees: [Pindang2]
 
 body:
