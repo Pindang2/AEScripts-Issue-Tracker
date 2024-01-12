@@ -19,6 +19,7 @@ body:
     options:
       - "Auto TextBox"
       - "Additional Transform"
+      - "Mirror Positions"
       - "New script or preset idea"
   validations:
     required: true

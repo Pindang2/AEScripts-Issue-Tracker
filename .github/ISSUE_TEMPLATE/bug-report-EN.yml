@@ -43,6 +43,7 @@ body:
     options:
       - "Auto TextBox"
       - "Additional Transform"
+      - "Mirror Positions"
       - "All script products"
       - "All preset products"
   validations:

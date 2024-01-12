@@ -19,6 +19,7 @@ body:
     options:
       - "Auto TextBox"
       - "Additional Transform"
+      - "Mirror Positions"
       - "새로운 스크립트 또는 프리셋 아이디어"
   validations:
     required: true

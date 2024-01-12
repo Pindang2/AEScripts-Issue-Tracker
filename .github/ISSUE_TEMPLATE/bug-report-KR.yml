@@ -42,6 +42,7 @@ body:
     options:
       - "Auto TextBox"
       - "Additional Transform"
+      - "Mirror Positions"
       - "스크립트 제품 전부"
       - "프리셋 제품 전부"
   validations:
