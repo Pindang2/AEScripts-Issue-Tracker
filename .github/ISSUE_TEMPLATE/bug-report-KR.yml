@@ -43,6 +43,7 @@ body:
       - "Auto TextBox"
       - "Additional Transform"
       - "Mirror Positions"
+      - "한글타자: 한글한글 실제 키보드로 타이핑하듯이"
       - "스크립트 제품 전부"
       - "프리셋 제품 전부"
   validations:
@@ -73,6 +74,8 @@ body:
       - "After Effects 2022"
       - "After Effects 2023"
       - "After Effects 2024"
+      - "After Effects 2025"
+      - "After Effects 2026"
   validations:
     required: true
   

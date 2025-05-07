@@ -20,6 +20,7 @@ body:
       - "Auto TextBox"
       - "Additional Transform"
       - "Mirror Positions"
+      - "한글타자: 한글한글 실제 키보드로 타이핑하듯이"
       - "新しいスクリプトまたはプリセットのアイデアです"
   validations:
     required: true
